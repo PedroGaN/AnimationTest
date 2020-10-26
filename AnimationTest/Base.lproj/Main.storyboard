@@ -11,14 +11,30 @@
         <!--item Size-->
         <scene sceneID="S8X-UB-H3S">
             <objects>
-                <viewController title="item Size" id="NFh-fX-acJ" sceneMemberID="viewController">
+                <viewController title="item Size" id="NFh-fX-acJ" customClass="SizeViewController" customModule="AnimationTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gyt-Dp-sVU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="Df6-jY-Hv7">
+                                <rect key="frame" x="91" y="360.5" width="232" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="4Yl-as-okb"/>
+                                    <constraint firstAttribute="width" constant="232" id="dJf-9x-hUf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ijt-dm-in3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Df6-jY-Hv7" firstAttribute="centerX" secondItem="Gyt-Dp-sVU" secondAttribute="centerX" id="2OV-gn-3EV"/>
+                            <constraint firstItem="Df6-jY-Hv7" firstAttribute="centerY" secondItem="Gyt-Dp-sVU" secondAttribute="centerY" id="Njr-fl-nBa"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="qGx-0J-hTx"/>
+                    <tabBarItem key="tabBarItem" title="Size" id="qGx-0J-hTx" userLabel="Size"/>
+                    <connections>
+                        <outlet property="sizeImageView" destination="Df6-jY-Hv7" id="tcD-24-Wou"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4hH-Aj-bR7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,14 +43,26 @@
         <!--item Position-->
         <scene sceneID="1AK-HT-qtI">
             <objects>
-                <viewController title="item Position" id="qBp-tF-oGR" sceneMemberID="viewController">
+                <viewController title="item Position" id="qBp-tF-oGR" customClass="PositionViewController" customModule="AnimationTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="khG-Cm-dYw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="4Ss-Zv-wGV">
+                                <rect key="frame" x="-25.5" y="273" width="465" height="350"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="HBN-jr-XJ8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Ss-Zv-wGV" firstAttribute="centerY" secondItem="khG-Cm-dYw" secondAttribute="centerY" id="auG-Zq-oVs"/>
+                            <constraint firstItem="4Ss-Zv-wGV" firstAttribute="centerX" secondItem="khG-Cm-dYw" secondAttribute="centerX" id="gAt-7i-IQN"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="xxE-ZJ-frA"/>
+                    <tabBarItem key="tabBarItem" title="Position" id="xxE-ZJ-frA" userLabel="Position"/>
+                    <connections>
+                        <outlet property="positionImageView" destination="4Ss-Zv-wGV" id="QuM-Nf-FLj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3P-Ic-tIE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,7 +107,7 @@
                             <constraint firstItem="bwI-7J-WXC" firstAttribute="centerX" secondItem="AVj-tK-A6I" secondAttribute="centerX" id="ffV-dg-Hhi"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="uJh-xf-3rk"/>
+                    <tabBarItem key="tabBarItem" title="Alpha" id="uJh-xf-3rk" userLabel="Alpha"/>
                     <connections>
                         <outlet property="alphaImageView" destination="bwI-7J-WXC" id="XO7-DB-aGg"/>
                     </connections>
@@ -95,10 +123,27 @@
                     <view key="view" contentMode="scaleToFill" id="T1z-48-LAl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fAL-aY-qa7">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="9Bd-Rx-5le"/>
+                                    <constraint firstAttribute="height" constant="200" id="lc8-m1-kR8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pXC-i3-FkG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fAL-aY-qa7" firstAttribute="centerY" secondItem="T1z-48-LAl" secondAttribute="centerY" id="1DX-b9-og9"/>
+                            <constraint firstItem="fAL-aY-qa7" firstAttribute="centerX" secondItem="T1z-48-LAl" secondAttribute="centerX" id="a4R-Zb-JAi"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="10e-k3-SEa"/>
+                    <tabBarItem key="tabBarItem" title="Color" id="10e-k3-SEa" userLabel="Color"/>
+                    <connections>
+                        <outlet property="colorImageView" destination="fAL-aY-qa7" id="GrO-7R-8Zi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a75-6O-5tE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,6 +154,9 @@
         <image name="test" width="464.5" height="350"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
